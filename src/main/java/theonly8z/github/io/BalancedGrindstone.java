@@ -1,6 +1,8 @@
 package theonly8z.github.io;
 
+import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.HumanEntity;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class BalancedGrindstone extends JavaPlugin {
@@ -15,13 +17,8 @@ public class BalancedGrindstone extends JavaPlugin {
         getServer().getPluginManager().registerEvents(bgListener, this);
 
         // Default config(s)
-        /*
-        config.addDefault("durability.maxHits", 3);
-        config.addDefault("durability.repairChance", 0.1);
-        config.addDefault("durability.disenchantChance", 0.2);
 
         config.addDefault("disenchant.bookDestroy", 0.5);
-        config.addDefault("disenchant.gearDestroy", 0);
         config.addDefault("disenchant.gearDamage.percent", 0.3);
         config.addDefault("disenchant.gearDamage.useMax", true);
         config.addDefault("disenchant.gearDamage.canDestroy", true);
@@ -29,13 +26,17 @@ public class BalancedGrindstone extends JavaPlugin {
         config.addDefault("repair.additionalDurability", 0.15);
 
         this.saveDefaultConfig();
-        */
         // config.options().copyDefaults(true);
         // saveConfig();
     }
     @Override
     public void onDisable() {
 
+    }
+
+
+    public void sendMessage(HumanEntity ply, String message) {
+        ply.sendMessage("[" + "§7BalancedGrindstone§f" + "]" + ": §r" + message);
     }
 
 }

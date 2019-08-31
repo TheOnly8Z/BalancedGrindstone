@@ -1,5 +1,6 @@
 name: BalancedGrindstone
 description: Introduces new mechanics to the 1.14 Grindstone to help balance enchantment economy.
 author: TheOnly8Z
-version: 1.0
+version: 1.0.0
+api-version: 1.14
 main: theonly8z.github.io.BalancedGrindstone

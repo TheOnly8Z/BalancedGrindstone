@@ -1,34 +1,10 @@
 # Config file for BalancedGrindstone.
 
-# Grindstone durability configuration
-# The grindstone now behaves like an anvil, and has a chance to be damaged when used.
-durability:
-
-  # The amount of damage the grindstone can take before being destroyed.
-  # Set to -1 to disable durability.
-  maxHits: 3
-
-  # The chance that repairing an item with the grindstone damages it.
-  repairChance: 0.1
-
-  # The chance that disenchanting an item with the grindstone damages it.
-  disenchantChance: 0.2
-
-  # The message shown to the player using the grindstone, denoting durability.
-  message:
-    1: 'This grindstone is nearly broken.'
-    2: 'This grindstone is damaged.'
-    3: 'This grindstone is in good condition.'
-
-
 # Disenchantment configuration
 disenchant:
 
   # The chance that an enchanted book will be destroyed when disenchanted.
   bookDestroy: 0.5
-
-  # The chance that an enchanted equipment will be destroyed when disenchanted.
-  gearDestroy: 0
 
   # Damage equipment when disenchanting. Can work with gearDestroy.
   gearDamage:
@@ -49,7 +25,7 @@ disenchant:
 # Repairing configuration
 repair:
 
-  # The amount of bonus durability ON TOP of vanilla bonus to give.
+  # The amount of bonus durability ON TOP of vanilla 5% bonus to give.
   # This is relative to total durability
-  # e.g. repairing Wooden Pickaxe gives 60 * 0.15 = 9 extra durability.
-  bonusDurability: 0.15
+  # e.g. repairing Wooden Pickaxe gives 60 * 0.05 = 9 extra durability, on top of another 9 from vanilla bonus.
+  bonusDurability: 0.05
